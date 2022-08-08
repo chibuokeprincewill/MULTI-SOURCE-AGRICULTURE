@@ -227,6 +227,8 @@ header {
 
 @media (min-width: 1100px) {
   .slider {
+    padding: 5rem 0;
+    
     position: relative;
     display: flex;
     justify-content: center;

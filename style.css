@@ -162,12 +162,12 @@ header {
   }
   .navigation,
   .nav-buttons {
-    width: 40%;
+    width: 45%;
     display: flex;
     justify-content: space-between;
   }
   .navigation {
-    width: 45%;
+/*     width: 45%; */
   }
   .nav-button {
     padding: 1rem;

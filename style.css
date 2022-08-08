@@ -10,7 +10,8 @@ h4 {
   color: #017a0f;
 }
 h1 {
-  font-size: 4rem;
+  font-size: 3.2rem;
+  line-height: 4rem;
 }
 h2 {
   font-size: 2rem;
@@ -175,7 +176,71 @@ header {
 /* SLIDER */
 
 .slider {
+  width: 100%;
+}
+.slider-content {
+  width: 100%;
+}
+.hero-images {
   display: none;
+}
+
+.slide-1 {
+  text-align: center;
+  padding: 3rem 0 5rem 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.slide-1 h1 {
+  margin-bottom: 1rem;
+  padding: 0 1%;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: url("images/Hero\ Image.png");
+  color: transparent;
+}
+.slide-1 p {
+  color: #017a0f;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+.top-left-buttons {
+  width: 70%;
+  max-width: 370px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.top-left-button {
+  font-weight: 800;
+  padding: 0.8rem 1rem;
+  border: 1px solid #017a0f;
+}
+.get-list {
+  background-color: white;
+  color: #017a0f;
+}
+
+@media (min-width: 1100px) {
+  .slider {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .slide-1 {
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    align-self: center;
+  }
+  .top-left-buttons {
+    width: 300px;
+  }
 }
 
 /* TOP LEFT */
@@ -325,14 +390,14 @@ header {
 
 #section-2 {
   padding: 2rem 5%;
-  margin-bottom: 7rem;
+  margin-bottom: 0rem;
 }
 #section-2 p {
   font-weight: 700;
   line-height: 1.3rem;
 }
 .about-us {
-  margin-bottom: 7rem;
+  margin-bottom: 4rem;
 }
 .about-us h2 {
   margin: -0.5rem 0 auto 0;
@@ -372,7 +437,7 @@ header {
     margin-bottom: 0;
   }
   .about-us {
-    margin-bottom: 10rem;
+    margin-bottom: 5rem;
 
     display: flex;
     flex-direction: row-reverse;
@@ -409,7 +474,6 @@ header {
 @media (min-width: 1100px) {
   .what-we-do {
     display: flex;
-    /* align-items: center; */
   }
   .about-text-2 {
     width: 40%;
@@ -481,7 +545,7 @@ header {
 #section-3 {
   text-align: center;
   padding: 2rem 5%;
-  margin-bottom: 7rem;
+  margin-bottom: 5rem;
 }
 #section-3 h2 {
   margin: 0;
@@ -493,7 +557,7 @@ header {
   margin: 1rem 0 3rem 0;
 }
 .services {
-  margin-bottom: 7rem;
+  margin-bottom: 5rem;
 }
 .service {
   max-width: 400px;
@@ -511,7 +575,7 @@ header {
 
 @media (min-width: 1100px) {
   #section-3 {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
   .services {
     /* width: 80vw; */
@@ -540,7 +604,7 @@ header {
 /* PRODUCTS */
 
 .products {
-  margin-bottom: 6rem;
+  margin-bottom: 4rem;
 }
 .products-text p {
   margin-bottom: 4rem;
@@ -674,7 +738,7 @@ header {
   text-align: center;
 }
 .location-container {
-  margin-bottom: 7rem;
+  margin-bottom: 5rem;
 }
 .map-location {
   box-shadow: 0px 10px 15px rgba(2, 97, 13, 0.05);

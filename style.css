@@ -51,6 +51,7 @@ button {
 }
 button:hover {
   cursor: pointer;
+  padding: 1.2rem;
 }
 a {
   color: rgba(27, 28, 30, 1);
@@ -171,7 +172,9 @@ header {
     padding: 1rem;
   }
 }
+
 /* CAROUSEL SLIDER */
+
 * {
   box-sizing: border-box;
 }
@@ -179,13 +182,13 @@ header {
 #carouselSlider {
   padding-bottom: 1rem;
   overflow: hidden;
+  margin: 0;
 }
 .carousel-inner {
   position: relative;
   width: 100%;
-  height: 600px;
-  /* margin: 0;
-  left: 0; */
+  height: 100vh;
+  margin: 0;
 
   /* overflow: auto;
   flex-wrap: nowrap;
@@ -208,12 +211,6 @@ header {
   justify-content: center;
   align-items: center;
   /* flex: 0 0 auto; */
-}
-
-.carousel-item img {
-  /* top: 0;
-  left: 0; */
-  /* z-index: -1; */
 }
 
 /* ANIMATIONS */
@@ -392,9 +389,6 @@ header {
 }
 
 @media (min-width: 1100px) {
-  .slide-1 {
-    width: 100%;
-  }
   .top-left-buttons {
     width: 300px;
   }
@@ -438,6 +432,9 @@ header {
   border: none;
 }
 
+.dot-container {
+  margin: 0;
+}
 .dot {
   cursor: pointer;
   height: 15px;
@@ -456,7 +453,7 @@ header {
   #section-1 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 2fr 1fr;
+    grid-template-rows: auto auto;
   }
   #carouselSlider {
     grid-row: 1/2;
@@ -472,22 +469,9 @@ header {
     grid-column: 2/3;
   }
 
-  /* #carouselSlider {
-    overflow: hidden;
-    overflow-y: hidden;
-  } */
-  /* .carousel-item {
-    width: 100%;
-    position: relative;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex: 0 0 auto;
-  } */
   .carousel-item img {
     object-fit: contain;
+    height: 100vh;
 
     position: absolute;
     top: 0;
@@ -497,7 +481,7 @@ header {
   .item-text {
     width: 400px;
     padding-bottom: 3rem;
-    margin-top: 3rem;
+    margin-top: 7rem;
     opacity: 1;
   }
   .item-text h2,
@@ -789,10 +773,10 @@ header {
   box-shadow: 0px 15px 20px 1px rgba(2, 97, 13, 0.05);
 }
 .service h4 {
-  line-height: 0;
+  /* line-height: 0; */
 }
 .service p {
-  padding: 0 1rem;
+  padding: 1rem;
 }
 
 @media (min-width: 1100px) {
@@ -801,20 +785,22 @@ header {
   }
   .services {
     /* width: 80vw; */
+    height: 510px;
 
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+    /* align-content: stretch; */
   }
   .service {
     max-width: 350px;
-    height: 450px;
+    height: 100%;
   }
   .service img {
     width: 100%;
   }
   .service h4 {
-    line-height: 0;
+    line-height: auto;
     font-size: 1.8rem;
     margin-bottom: 1rem;
   }

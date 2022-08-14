@@ -48,17 +48,23 @@ button {
   font-weight: 700;
   border-radius: 5px;
   padding: 0 1rem;
+  transition: all 500ms ease-in-out;
 }
 button:hover {
   cursor: pointer;
-  padding: 1.2rem;
+  background-color: inherit;
+  border-radius: 15px;
 }
 a {
   color: rgba(27, 28, 30, 1);
   font-weight: 700;
+  transition: all 1000ms ease;
 }
 a:link {
   text-decoration: none;
+}
+a:hover {
+  color: #017a0f;
 }
 img {
   width: 100%;
@@ -121,18 +127,29 @@ header {
 .nav {
   margin-bottom: 0.5rem;
 }
+.nav a:hover {
+  border-bottom: 1px solid #017a0f;
+}
 .nav-button {
   border: none;
   padding: 0.5rem 1rem;
 }
 .quote-button {
   margin-bottom: 1rem;
+  border: 1px solid #017a0f;
+}
+.quote-button:hover {
+  color: #017a0f;
 }
 .directions {
   color: #017a0f;
   background: rgba(1, 120, 16, 0.2);
   padding: 0.5rem 1rem;
-  border: none;
+  border: 1px solid white;
+}
+.directions:hover {
+  /* color: #017a0f; */
+  border: 1px solid #717171;
 }
 
 @media (min-width: 1100px) {
@@ -189,63 +206,63 @@ header {
   width: 100%;
   height: 100vh;
   margin: 0;
-
-  /* overflow: auto;
-  flex-wrap: nowrap;
-  display: flex;
-  justify-content: flex-start;
-  align-items: baseline; */
 }
 .carousel-item {
   width: 100%;
-  /* height: 600px; */
   position: absolute;
   top: 0;
   left: 0;
-
-  /* position: relative; */
-  /* float: left; */
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* flex: 0 0 auto; */
+
+  transition: all 3s ease-in-out;
 }
 
 /* ANIMATIONS */
 .item-1 {
   margin-top: 7rem;
-  animation: slide1 30s ease-in-out infinite;
+  animation: slide1 35s ease-in-out infinite;
 }
 .item-2 {
-  animation: slide2 30s ease-in-out infinite;
+  animation: slide2 35s ease-in-out infinite;
 }
 .item-3 {
-  animation: slide3 30s ease-in-out infinite;
+  animation: slide3 35s ease-in-out infinite;
 }
 .item-4 {
-  animation: slide4 30s ease-in-out infinite;
+  animation: slide4 35s ease-in-out infinite;
 }
 .item-5 {
-  /* display: none; */
-  animation: slide5 30s ease-in-out infinite;
+  animation: slide5 35s ease-in-out infinite;
+}
+.item-6 {
+  animation: slide6 35s ease-in-out infinite;
 }
 
 @keyframes slide1 {
   0% {
     visibility: visible;
+    opacity: 0;
   }
-  20% {
+  10% {
+    opacity: 1;
+  }
+  16.66% {
     visibility: hidden;
   }
-  40% {
+  33.32% {
     visibility: hidden;
   }
-  60% {
+  50% {
     visibility: hidden;
   }
-  80% {
+  66.66% {
+    visibility: hidden;
+  }
+  83.32% {
     visibility: hidden;
   }
   100% {
@@ -256,16 +273,19 @@ header {
   0% {
     visibility: hidden;
   }
-  20% {
+  16.66% {
     visibility: hidden;
   }
-  40% {
+  33.32% {
     visibility: visible;
   }
-  60% {
+  50% {
     visibility: hidden;
   }
-  80% {
+  66.66% {
+    visibility: hidden;
+  }
+  83.32% {
     visibility: hidden;
   }
   100% {
@@ -276,16 +296,19 @@ header {
   0% {
     visibility: hidden;
   }
-  20% {
+  16.66% {
     visibility: hidden;
   }
-  40% {
+  33.32% {
     visibility: hidden;
   }
-  60% {
+  50% {
     visibility: visible;
   }
-  80% {
+  66.66% {
+    visibility: hidden;
+  }
+  83.32% {
     visibility: hidden;
   }
   100% {
@@ -296,17 +319,20 @@ header {
   0% {
     visibility: hidden;
   }
-  20% {
+  16.66% {
     visibility: hidden;
   }
-  40% {
+  33.32% {
     visibility: hidden;
   }
-  60% {
+  50% {
     visibility: hidden;
   }
-  80% {
+  66.66% {
     visibility: visible;
+  }
+  83.32% {
+    visibility: hidden;
   }
   100% {
     visibility: hidden;
@@ -316,16 +342,42 @@ header {
   0% {
     visibility: hidden;
   }
-  20% {
+  16.66% {
     visibility: hidden;
   }
-  40% {
+  33.32% {
     visibility: hidden;
   }
-  60% {
+  50% {
     visibility: hidden;
   }
-  80% {
+  66.66% {
+    visibility: hidden;
+  }
+  83.32% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+@keyframes slide6 {
+  0% {
+    visibility: hidden;
+  }
+  16.66% {
+    visibility: hidden;
+  }
+  33.32% {
+    visibility: hidden;
+  }
+  50% {
+    visibility: hidden;
+  }
+  66.66% {
+    visibility: hidden;
+  }
+  83.32% {
     visibility: hidden;
   }
   100% {
@@ -341,7 +393,6 @@ header {
   background-color: #ffffff;
   color: #017a0f;
   opacity: 1;
-  /* z-index: 1; */
 }
 .item-text p {
   color: #017a0f;
@@ -371,6 +422,10 @@ header {
   font-weight: 700;
   margin-bottom: 2rem;
 }
+.contact-us:hover {
+  color: #017a0f;
+}
+
 .top-left-buttons {
   width: 70%;
   max-width: 340px;
@@ -429,7 +484,13 @@ header {
   background-color: #ffffff;
   color: rgba(27, 28, 30, 1);
   padding: 0.5rem 1rem;
-  border: none;
+  border: 0.5px solid white;
+  transition: all 800ms ease-in-out;
+}
+#top-left button:hover {
+  background-color: inherit;
+  color: white;
+  border-radius: 20px;
 }
 
 .dot-container {
@@ -569,7 +630,6 @@ header {
     font-weight: 800;
     font-size: 1.6rem;
     padding: 2rem 8% 3rem 8%;
-    /* height: min-content; */
   }
   #top-right h2 {
     margin: 1rem 0 -1.5rem 0;
@@ -674,7 +734,11 @@ header {
   font-weight: 800;
   padding: 0.5rem 1rem;
   margin-top: 1rem;
-  border: none;
+  border: 1px solid #017a0f;
+}
+.learn-button:hover {
+  color: #017a0f;
+  border-radius: 15px;
 }
 
 @media (min-width: 1100px) {
@@ -772,9 +836,6 @@ header {
   margin-bottom: 3rem;
   box-shadow: 0px 15px 20px 1px rgba(2, 97, 13, 0.05);
 }
-.service h4 {
-  /* line-height: 0; */
-}
 .service p {
   padding: 1rem;
 }
@@ -784,13 +845,11 @@ header {
     margin-bottom: 1rem;
   }
   .services {
-    /* width: 80vw; */
     height: 510px;
 
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    /* align-content: stretch; */
   }
   .service {
     max-width: 350px;
@@ -1046,9 +1105,12 @@ textarea {
 .send-button {
   margin-top: 1rem;
   padding: 0.8rem 1rem;
-  border: none;
+  border: 1px solid #017a0f;
   font-weight: 800;
   font-size: 16px;
+}
+.send-button:hover {
+  color: #017a0f;
 }
 
 @media (min-width: 1100px) {
@@ -1159,6 +1221,9 @@ footer {
 .button-1 {
   background: #f8f8f8;
   color: #017a0f;
+}
+.button-1:hover {
+  color: #ededfc;
 }
 .button-2 {
   background: rgba(255, 255, 255, 0.3);
